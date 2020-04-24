@@ -11,6 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,16 +20,21 @@
         <div class="row">
             <div class="col-12">
                 <h1>Gerador de senha</h1>
-                <h3 class="senha bg-white text-dark p-2" id="mostraSenha">Senha</h3>
+                <div class="senha bg-white text-dark p-2 d-flex">
+                    <h3 id="mostraSenha">Senha</h3>
+                    <!-- <div class="copia ml-auto" id="copiaSenha">
+                        <i class="fa fa-clone"></i>
+                    </div> -->
+                </div>
                 <form action="" id="formGeradorDeSenha">
                     <div class="row mt-5">
                         <div class="col-12">
-                            <label for="numeroCaracteres">Número de Caractéres</label>
+                            <label for="numeroCaracteres">Número de Caracteres</label>
                             <input type="range" min="1" max="30" value="10" id="rangeCaracteres">
                             <input class="input-numero" type="number" min="1" max="30" value="10" id="numeroCaracteres">
                         </div>
                         <div class="col-12">
-                            <label for="incluirMaiuscula">Incluir Maíusculas</label>
+                            <label for="incluirMaiuscula">Incluir Maiúsculas</label>
                             <input type="checkbox" id="incluirMaiuscula">
                         </div>
                         <div class="col-12">
@@ -62,6 +68,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="js/copia-senha.js"></script>
 </body>
 
 </html>
