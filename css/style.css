@@ -1,0 +1,11 @@
+.container {
+    width: 600px;
+}
+
+.senha {
+    border-radius: 5px;
+}
+
+.input-numero {
+    width: 50px;
+}
