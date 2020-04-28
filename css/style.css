@@ -1,11 +1,13 @@
 .container {
-    width: 600px;
+    width: 400px;
 }
 
 .senha {
     border-radius: 5px;
 }
 
-.input-numero {
-    width: 50px;
+.modal-content {
+    width: 400px !important;
+    margin-left: auto;
+    margin-right: auto;
 }
