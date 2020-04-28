@@ -1,0 +1,13 @@
+.container {
+    width: 400px;
+}
+
+.senha {
+    border-radius: 5px;
+}
+
+.modal-content {
+    width: 400px !important;
+    margin-left: auto;
+    margin-right: auto;
+}

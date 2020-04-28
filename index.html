@@ -15,40 +15,43 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
-
-<body class="">
+<body class="bg-dark">
     <div class="container mt-5">
-        <form id="formInputSenha">
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-group">
-                        <label for="inputSenha">Senha</label>
-                        <input type="password" name="password" class="form-control" id="inputSenha"
-                            placeholder="Clique para gerar senha" data-toggle="modal" data-target="#modalSenha">
+        <div class="card" style="width: 100%;">
+            <img class="card-img-top ml-auto mr-auto" src="img/senha-segura.jpg" alt="Card image cap" style="width: 200px;">
+            <div class="card-body">
+                <form id="formInputSenha" class="form-sigin">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="inputSenha">Senha</label>
+                                <input type="password" name="password" class="form-control" id="inputSenha"
+                                    placeholder="Clique para gerar senha" data-toggle="modal" data-target="#modalSenha">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputConfirmaSenha">Confirmar Senha</label>
+                                <input type="password" class="form-control" id="inputConfirmaSenha" data-toggle="modal"
+                                    data-target="#modalSenha" placeholder="Confirmação de senha">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" id="verSenha" class="btn btn-warning">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="col-12 text-right">
+                            <button class="btn btn-primary" type="submit">Salvar</button>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="inputConfirmaSenha">Confirmar Senha</label>
-                        <input type="password" class="form-control" id="inputConfirmaSenha" data-toggle="modal"
-                            data-target="#modalSenha">
-                    </div>
-                </div>
-                <div class="col-12">
-                    <button type="button" id="verSenha" class="btn btn-warning">
-                        <i class="fa fa-eye"></i>
-                    </button>
-                </div>
-                <div class="col-12 text-right">
-                    <button class="btn btn-primary" type="submit">Salvar</button>
-                </div>
-                <div id="confirmText" class="d-none alert alert-primary">
-                    Senha cadastrada com sucesso
-                </div>
-                <div id="errorText" class="d-none alert alert-danger">
-                    Os campos devem conter a mesma senha
-                </div>  
+                </form>
             </div>
-        </form>
+        </div>
+        <div id="confirmText" class="d-none alert alert-primary mt-2 text-center">
+            Senha cadastrada com sucesso
+        </div>
+        <div id="errorText" class="d-none alert alert-danger mt-2 text-center">
+            Os campos devem conter a mesma senha
+        </div>
 
     </div>
 
@@ -57,32 +60,42 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="col-lg-12 col-md-12 com-sm-12">
-                    <h1>Gerador de senha</h1>
-                    <div class="senha bg-white text-dark p-2 d-flex">
-                        <h3 id="mostraSenha">Senha</h3>
+                <div class="modal-header">
+                    <h4>Gerador de senha</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12 text-center">
+                        <h5 id="mostraSenha" class="senha bg-dark text-white p-3">Senha</h5>
                     </div>
                     <form action="" id="formGeradorDeSenha">
                         <div class="row mt-5">
-                            <div class="col-lg-12 col-md-12 com-sm-12">
+                            <div class="col-12">
                                 <label for="numeroCaracteres">Número de Caracteres</label>
-                                <input type="range" min="1" max="30" value="10" id="rangeCaracteres">
-                                <input class="input-numero" type="number" min="1" max="30" value="10"
+                            </div>
+                            <div class="col-9">
+                                <input type="range" class="form-control-range" min="1" max="30" value="10" id="rangeCaracteres">
+                            </div>
+                            <div class="col-3">
+                                <input class=" form-control" type="number" min="1" max="30" value="10"
                                     id="numeroCaracteres">
                             </div>
-                            <div class="col-lg-12 col-md-12 com-sm-6">
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
                                 <label for="incluirMaiuscula">Incluir Maiúsculas</label>
                                 <input type="checkbox" id="incluirMaiuscula">
                             </div>
-                            <div class="col-lg-12 col-md-12 com-sm-6">
+                            <div class="col-12">
                                 <label for="incluirNumeros">Incluir Números</label>
                                 <input type="checkbox" id="incluirNumeros">
                             </div>
-                            <div class="col-lg-12 col-md-12 com-sm-6">
+                            <div class="col-12">
                                 <label for="incluirSimbolos">Incluir Símbolos</label>
                                 <input type="checkbox" id="incluirSimbolos">
                             </div>
-                            <div class="col-lg-12 col-md-12 com-sm-6 text-right mb-3">
+                            <div class="col-12 text-right mb-3">
                                 <button id="botaoFechaModal" class="btn btn-primary" data-dismiss="modal">Ok</button>
                             </div>
                         </div>
@@ -91,6 +104,12 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="text-center text-white mt-2">
+            <a href="https://github.com/devjef/gerador-de-senha-segura">devjef</a>
+        </div>
+        </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -104,10 +123,10 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/seletores.js"></script>
-    <script src="js/geraSenha.js"></script>
-    <script src="js/copiaSenha.js"></script>
-    <script src="js/revelaSenha.js"></script>
-    <script src="js/validaSenha.js"></script>
+    <script src="js/gera-senha.js"></script>
+    <script src="js/copia-senha.js"></script>
+    <script src="js/revela-senha.js"></script>
+    <script src="js/valida-senha.js"></script>
 </body>
 
 </html>
