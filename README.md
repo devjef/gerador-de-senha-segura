@@ -1,8 +1,7 @@
-# gerador-de-senha-segura
-Gerador de Senha Segura com opções de personalização feita pelo usuário
+# Gerador de Senha Segura
 
-Visualização: https://devjef.github.io/gerador-de-senha-segura/
+> Gerador de Senha Segura com opções de personalização feita pelo usuário
 
-Guia de Char Codes: https://www.petefreitag.com/cheatsheets/ascii-codes/
+[Ver projeto](https://devjef.github.io/gerador-de-senha-segura/)
 
-
+[Guia de Charcodes](https://www.petefreitag.com/cheatsheets/ascii-codes/)
